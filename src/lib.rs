@@ -203,7 +203,7 @@ impl Calendar {
                 "TRANSP" => {
                     even_temp.transp = value_cal;
                 }
-              
+
                 "DTSTART" => match convert_datetime(&value_cal, "%Y%m%dT%H%M%SZ") {
                     Ok(val) => {
                         even_temp.dtstart = val;
@@ -218,7 +218,6 @@ impl Calendar {
                         }
                         Err(_) => (),
                     }
-
                 }
                 "DTEND;VALUE=DATE" => {
                     let time_cal = "T002611Z";
